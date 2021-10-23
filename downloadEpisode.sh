@@ -5,6 +5,9 @@ series=$1
 episode=$2
 url="https://roosterteeth.com/watch"
 
+youtube-dl --version || sudo zypper install -y youtube-dl || sudo apt install youtube-dl -y || sudo pacman --noconfirm -S youtube-dl
+ffmpeg -version || sudo zypper install -y ffmpeg || sudo apt install ffmpeg || sudo pacman --noconfirm -S ffmpeg
+
 case $series in
     1)
     link="$url/rwby-season-1-episode-$episode"
